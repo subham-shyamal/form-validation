@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest House Reservation</title>
+    <style>
+      section {
+        padding: 3% 20%;
+        background-color: azure;
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 50%;
+      }
+      .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: aqua;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 0.25em 0.65em;
+      }
+      button {
+        padding: 0.75em 1.75em;
+        border: none;
+        border-radius: 2px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .formError {
+        color: red;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="heading">
+        <h1>Guest House Reservation</h1>
+      </div>
+      <form id="form" name="myForm">
+        <div id="firstName">
+          <label for="fname">First Name :</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Type your first name"
+          />
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="lastName">
+          <label for="lname">Last Name :</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Type your last name"
+          />
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="email">
+          <label for="email">Email Address :</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Fill in your email address"
+          />
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="govID">
+          <label for="govID">Govt.Issued ID :</label>
+          <select id="govID" name="govID">
+            <option value="">select</option>
+            <option value="adhar">Adhar Card</option>
+            <option value="voter">Voter ID Card</option>
+            <option value="passport">Passport</option>
+            <option value="license">Driving License</option>
+          </select>
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="arrival">
+          <label for="arrivalDate">Date of Arrival :</label>
+          <input
+            type="date"
+            id="arrivalDate"
+            name="arrivalDate"
+            placeholder="Select the date"
+          />
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="departure">
+          <label for="depertureDate">Date of Departure :</label>
+          <input
+            type="date"
+            id="depertureDate"
+            name="depertureDate"
+            placeholder="Select the date"
+          />
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="country">
+          <label for="country">Choose your country:</label>
+          <!-- <input type="text" id="country" name="country" placeholder="Country Name" required> -->
+          <select id="country" name="country">
+            <option value="">select</option>
+            <option value="ind">IND</option>
+            <option value="jap">JAP</option>
+            <option value="chi">CHI</option>
+            <option value="usa">USA</option>
+            <option value="pak">PAK</option>
+            <option value="rus">RUS</option>
+            <option value="aus">AUS</option>
+            <option value="sl">SL</option>
+          </select>
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="person">
+          <label for="persons">Number of Persons :</label>
+          <select id="persons" name="persons">
+            <option value="">select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div id="request">
+          <label for="requests">Any Special Request :</label>
+          <br />
+          <textarea
+            name="requests"
+            id="requests"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <span class="formError"></span>
+        </div>
+        <br />
+
+        <div>
+          <label>Payment Method :</label>
+          <span class="formError"></span>
+          <input type="radio" id="debit" name="debit" value="debit" />
+          <label for="debit"> Debit</label>
+          <input type="radio" id="credit" name="credit" value="credit" />
+          <label for="credit">Credit</label>
+        </div>
+        <br />
+
+        <button id="submitBtn" type="submit" value="myForm">Submit</button>
+        <button id="cancelBtn">Cancel</button>
+        <button id="resetBtn">Reset</button>
+      </form>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
