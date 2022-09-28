@@ -1,0 +1,39 @@
+section {
+  padding: 3% 20%;
+  background-color: azure;
+}
+label {
+  font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  margin-top: 1.5ch;
+  height: 4ch;
+  background-color: aliceblue;
+  border: 2px solid aquamarine;
+  outline: none;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: aqua;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 0.25em 0.65em;
+}
+button {
+  padding: 0.75em 1.75em;
+  border: none;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.formError {
+  color: red;
+  font-size: 15px;
+}
